@@ -11,7 +11,7 @@ What runs here:
   with an AI-native conversational interface: the strangler pattern over the
   ERP's own authenticated APIs, bounded read tools in daily use, write
   workflows staged behind feature gates and acceptance tests. Engineered for
-  controlled enterprise rollout, not for demo day.
+  controlled enterprise rollout.
 - **Close and reconciliation lines** that build the daily numbers and refuse
   to publish them on any break or implausible input.
 - **Intelligence publications** — market briefs, meeting digests, operational
@@ -44,8 +44,7 @@ Each of these was paid for by a specific incident. Ask me about any of them.
 
 ---
 
-This page changes rarely; the fleet doesn't. Counts and dates about oneself
-age into either bragging or nostalgia — the principles above are the part
-that holds. Current state: live, in conversation.
+This page changes rarely; the fleet doesn't. Current state: live, in
+conversation.
 
 CFA charterholder · CPA (Aust.) · [gabrielwang.ai](https://gabrielwang.ai)
