@@ -2,49 +2,49 @@
 
 Group CFO in Singapore. Twenty years across commodities trading, corporate and
 investment banking, and private banking. Since 2026, much of my recurring
-finance work is carried out by a fleet of AI agents I built and run personally:
-daily close and reconciliation lines, market intelligence publications,
-executive workflow agents, and the watchdog fleet that keeps them honest.
+finance work is carried out by a fleet of AI agents I built and run personally
+— in daily production, next to real money.
 
-The production systems cannot be public; they run next to the money. What is
-public: the operating record below, working slices of the core patterns at
-[gabrielwang.ai](https://gabrielwang.ai), and the doctrine they run under.
-The rest can be inspected live, in conversation.
+What runs here:
 
-## The operating record
+- **Close and reconciliation lines** that build the daily numbers and refuse
+  to publish them on any break or implausible input.
+- **Intelligence publications** — market briefs, meeting digests, operational
+  dashboards — researched, written and delivered on schedule.
+- **Workflow agents** that file, chase and escalate what people promise each
+  other.
+- **A watchdog layer** that watches all of the above, including the watchers.
+- Most recently, the largest line: a conventional group ERP given an AI-native
+  conversational interface — the strangler pattern, bounded read-only tools
+  over the ERP's own authenticated APIs, writes held behind feature gates.
 
-*Counted from the machine, not estimated · August 2026*
-
-- 58 launchd jobs on one Mac mini: 42 on calendar schedules firing 100+ times a
-  day, plus 9 resident agents ticking every 15 seconds to an hour.
-- 16 of those jobs are watchdogs, including a registry watcher that watches the
-  watchdogs.
-- A dozen distinct publication lines run daily or weekly: market briefs, meeting
-  digests, mining-ERP dashboards, group-chat intelligence.
-- Numbers leave the machine only through gates. A daily NAV and reconciliation
-  line has closed 154 times this year; distribution is held on any break or
-  implausible price. The gates are not decorative: they have caught real sends
-  that one bad upstream price would have poisoned.
-- Nearly all of it went from nothing to production between May and August 2026,
-  alongside a full-time Group CFO role. The newest line is the largest: a
-  conventional group ERP given an AI-native interface in Microsoft Teams, now in
-  read-only multi-user pilot — 27 bounded read-only MCP tools over the ERP's own
-  authenticated APIs, per-employee identity mapping, guarded writes behind
-  feature gates, 347 automated tests.
+The code lives in private repositories, next to the data it touches. Working
+slices, rebuilt on synthetic data, are public at
+[gabrielwang.ai](https://gabrielwang.ai).
 
 ## Operating doctrine
 
-- LLMs judge, code counts.
-- Every send is gated. A failed run must be unable to pass silently.
-- Page only on confirmed-down. Silence at night is a feature.
-- Human in the loop where judgment matters. Sign-off is the final control.
+- **LLMs judge, code counts.** The model proposes, explains, ranks. Anything
+  that touches money is computed, validated and booked by deterministic code.
+- **Every send is gated.** A pipeline that can fail silently will, on the day
+  it matters most. Breaks and implausible inputs hold the send; a human sees
+  why before anyone else sees the number.
+- **Page only on confirmed-down.** Retry first; distinguish transient from
+  real; stay silent at night. An alert channel that cries wolf trains its
+  owner to sleep through the fire.
+- **Unattended is a discipline, not a default.** Watchdogs watch the jobs; a
+  registry watcher watches the watchdogs; a new test must be seen to fail
+  once before its green is believed.
+- **Human in the loop where judgment matters.** Automation moves the work.
+  Accountability doesn't move.
 
-## Stack
-
-Python, Node.js, MCP servers, Claude Code and headless agents, LLM-as-judge
-pipelines, SQLite, Azure Cosmos DB, Microsoft Graph and Teams bots, Cloudflare
-Pages/Workers, GitHub Actions.
+Each of these was paid for by a specific incident. Ask me about any of them.
 
 ---
 
-CFA charterholder · CPA (Aust.) · CV and contact at [gabrielwang.ai](https://gabrielwang.ai)
+This page changes rarely; the fleet doesn't. Counts and dates about oneself
+age into either bragging or nostalgia — the principles above are the part
+that holds. Current state: live, in conversation.
+
+CFA charterholder · CPA (Aust.) · CV and contact at
+[gabrielwang.ai](https://gabrielwang.ai)
